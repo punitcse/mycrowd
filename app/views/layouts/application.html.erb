@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Starttest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<ul class="nav nav-pills">
+<li><nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="...">
+      </a>
+    </div>
+  </div>
+</nav></li>
+  <li role="presentation" class="active"><a href="#">New test</a></li>
+  <li role="presentation"><a href="#">Dashboard</a></li>
+  <li role="presentation"><a href="#">  Your result</a></li>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

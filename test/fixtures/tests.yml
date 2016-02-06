@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  application_type: 1
+  url: MyString
+  instruction: MyText
+  bounty: 9.99
+  state: 1
+
+two:
+  application_type: 1
+  url: MyString
+  instruction: MyText
+  bounty: 9.99
+  state: 1

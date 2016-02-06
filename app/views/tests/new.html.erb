@@ -1,0 +1,28 @@
+<h1>Start a Bug Hunt</h1>
+<h3>1. What do you want to test?</h3>
+<%= form_for @test, class: 'navbar-form navbar-left' do |form| %>
+  <%= render partial: 'step1', locals: {f: form}%>
+
+
+  <h3>Instructions</h3>
+    <p>If you have any specific instruction for tester to follow describe them below</p>
+    <%= form.nested_fields_for :instructions do |i| %>
+      <div class="form-group">
+        <%= i.text_field :desc, class: 'instruction_field form-control col-xs-4' %>&nbsp;
+        <%= i.remove_nested_fields_link '<i class="fa fa-minus-square-o"></i>
+  '.html_safe %>
+      </div>
+    <% end %>
+    <%= form.add_nested_fields_link :instructions, '<i class="fa fa-plus-square-o">Add Instruction</i>
+'.html_safe %>
+
+  <h3>What is your Bountry</h3>
+  <p>you have a $15.00 credit that will be applied to this test.</p>
+
+  <div id="bounty_slider" class="col-xs-6  col-md-offset-1"></div>
+  <div class="col-xs-4">
+    Select your budget
+    <%= form.text_field :bounty, id: 'bounty_field' %>
+  </div>
+<%end%>
+

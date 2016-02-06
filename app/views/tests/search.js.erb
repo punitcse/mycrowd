@@ -1,0 +1,10 @@
+content = '';
+<% if @tests.blank? %>
+   content += 'No records found'
+<% else %>
+  <% @tests.map(&:url).each do|url| %>
+    content += '<div><%= url %></div>';
+  <% end %>
+<% end %>
+console.log(content);
+$('.autocomp').html(content);
